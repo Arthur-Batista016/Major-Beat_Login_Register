@@ -6,6 +6,8 @@ namespace MajorBeat
     {
         public static MauiApp CreateMauiApp()
         {
+            
+
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
@@ -19,6 +21,7 @@ namespace MajorBeat
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+           
 
             return builder.Build();
         }

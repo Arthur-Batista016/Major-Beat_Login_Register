@@ -5,73 +5,161 @@
              BackgroundColor="#4F1271">
     <ScrollView>
         <VerticalStackLayout>
+            
             <Button  Text="Voltar"  HeightRequest="40" WidthRequest="100" CornerRadius="36" HorizontalOptions="Start" Margin="20,40,0,0"></Button>
            
             <Label Text="Criar sua conta" HorizontalTextAlignment="Center" FontSize="25" TextColor="#e7e7e7"></Label>
-           <!--MUSICO OU CONTRATANTE (BOTÃO)-->
-
-            <Grid>
-                <RadioButton Content="Músico" GroupName="Músico" TextColor="#e7e7e7" IsChecked="True" HorizontalOptions="Start"  />
-                <RadioButton Content="Contratante" GroupName="Contratante" TextColor="#e7e7e7" IsChecked="False" IsEnabled="False"  HorizontalOptions="End" Margin="0,0,100,0"  />
+        
+            <Grid Margin="0,20,0,0">
+                <RadioButton Content="Músico" GroupName="Músico" TextColor="#e7e7e7" IsChecked="False" HorizontalOptions="Center" IsEnabled="False" FontSize="15" Margin="0,0,190,0"  />
+                <RadioButton Content="Contratante" GroupName="Contratante" TextColor="#e7e7e7" IsChecked="True" IsEnabled="True"  HorizontalOptions="Center" FontSize="15" Margin="120,0,0,0"  />
             </Grid>
-            <Label Text="Nome Completo" TextColor="#e7e7e7" Margin="0,0,0,0" HorizontalTextAlignment="Center"></Label>
-            <Entry Placeholder="Ex: Anderson Francisco Costa" BackgroundColor="#e7e7e7"></Entry>
 
-            <Label Text="Email"></Label>
-            <Entry Placeholder="Ex:anderson.francisco@gmail.com"></Entry>
 
-            <Label Text="Telefone"></Label>
-            <Grid>
-                
-                <Button Text="" WidthRequest="60" HorizontalOptions="Start" BackgroundColor="#e7e7e7" CornerRadius="10"></Button>
-                <Border StrokeShape="RoundRectangle 10" BackgroundColor="#E7E7E7" WidthRequest="285">
-                    <Entry Placeholder="Ex: (11) 95802-7781" HorizontalOptions="Center" Margin="0,0,149,0"></Entry>
+            <!--NOME COMPLETO-->
+
+            <Grid Margin="0,25,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Text="Nome Completo" TextColor="#e7e7e7" FontSize="16" Margin="40,0,0,0" HorizontalTextAlignment="Start"></Label>
+                <Border StrokeShape="RoundRectangle 10" BackgroundColor="#e7e7e7" Margin="0,30,0,0" WidthRequest="370">
+                    <Entry Grid.Row="1" Placeholder="Ex: Anderson Francisco Costa" PlaceholderColor="#604F1271" FontAttributes="Bold" HeightRequest="50"></Entry>
                 </Border>
-                </Grid>
+            </Grid>
 
             
-            <Label Text="Endereco" TextColor="#e7e7e7"></Label>
+            
+           
+           <!--E-MAIL-->
 
-            <Grid>
-
+            <Grid Margin="0,20,0,0">
+                <Label Text="E-mail" HorizontalOptions="Start" Margin="38,0,0,0" FontSize="16" TextColor="#e7e7e7"></Label>
+                <Border StrokeShape="RoundRectangle 10" BackgroundColor="#e7e7e7" Margin="0,30,0,0" WidthRequest="370">
+                    <Entry Placeholder="Ex:anderson.francisco@gmail.com" PlaceholderColor="#604F1271" HeightRequest="50"></Entry>
+                </Border>
+            </Grid>
+            
+            <!--TELEFONE-->
+           
+            <Grid Margin="20,20,0,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 
-                <Label Grid.Row="0" Text="Logradouro" TextColor="#e7e7e7" HorizontalTextAlignment="Start"></Label>
-                <Entry Grid.Row="1" Placeholder="Ex: R.Alcântara" HorizontalOptions="Start"></Entry>
-
-                <Label Grid.Row="0" Text="Número" HorizontalTextAlignment="End"></Label>
-                <Entry Grid.Row="1" Placeholder="Ex:1234" HorizontalOptions="End"></Entry>
+                <Label Grid.Row="0" Text="Telefone" TextColor="#e7e7e7" Margin="14,0,0,0" FontSize="16"></Label>
+                
+                <Picker
+                    Grid.Row="1"
+                    Title="v |"
+                    WidthRequest="70"
+                    HorizontalOptions="Start"
+                    TitleColor="#4F1271"
+                    BackgroundColor="#e7e7e7"
+                    TextColor="Black">  
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>+55</x:String>
+                            <x:String>+351</x:String>
+                            <x:String>+81</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Border   Grid.Row="1" StrokeShape="RoundRectangle 10" BackgroundColor="#E7E7E7" WidthRequest="320" Margin="10,0,0,0">
+                    <Entry Placeholder="Ex:(11) 95802-7781" HorizontalOptions="Center" Margin="170,0,149,0" WidthRequest="330"></Entry>
+                </Border>
+                
             </Grid>
 
-            <Grid>
-                <Label Text="CEP"></Label>
-                <Entry Placeholder="Ex:23987501"></Entry>
+            
+            
+            
+            
+            
+            <!--ENDERECO-->
+            
+            
+            <Grid Margin="0,35,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
 
-                <Label Text="Bairro"></Label>
-                <Entry Placeholder="Ex: Vila Maria Alta"></Entry>
+
+                <Label Grid.Row="0" Text="Endereco" TextColor="#e7e7e7" Margin="25,0,0,0" FontSize="18" ></Label>
+
+            <Grid Margin="0,40,0,0">
+
+                    <Label Grid.Row="1" Text="Logradouro" TextColor="#e7e7e7" Margin="25,0,0,0" HorizontalTextAlignment="Start"></Label>
+                    <Entry Grid.Row="2" Placeholder="Ex: R.Alcântara" HorizontalOptions="Start" Margin="0,20,0,0"></Entry>
+                
+                    <Label Grid.Row="1" Text="Número" TextColor="#e7e7e7" HorizontalTextAlignment="Center" Margin="200,0,0,0"></Label>
+                    <Entry Grid.Row="2" Placeholder="Ex: 1234" HorizontalOptions="End" Margin="0,20,0,0"></Entry>
+            
             </Grid>
 
-            <Grid>
-                <Label Text="Cidade"></Label>
-                <Entry Placeholder="Ex:Campinas"></Entry>
+                
+            <Grid Margin="0,100,0,0">
+                
+                <Label Grid.Row="3" Text="CEP" TextColor="#e7e7e7" ></Label>
+                <Entry Grid.Row="4" Placeholder="Ex:23987501" Margin="0,20,0,0"></Entry>
 
-                <Label Text="UF"></Label>
-                <Entry Placeholder="Ex:São Paulo"></Entry>
+                <Label  Grid.Row="3" Text="Bairro" HorizontalTextAlignment="Center" TextColor="#e7e7e7"></Label>
+                <Entry   Grid.Row="4" Placeholder="Ex: Vila Maria Alta" Margin="0,20,0,0" HorizontalOptions="Center"></Entry>
+            
             </Grid>
 
-            <Label Text="Senha"></Label>
-            <Entry Placeholder="obr:Minimo 8 caracteres"></Entry>
+            <Grid Margin="0,150,0,0">
+                <Label  Grid.Row="5" Text="Cidade" TextColor="#e7e7e7"></Label>
+                <Entry  Grid.Row="6" Placeholder="Ex:Campinas"></Entry>
 
-            <Label Text=" Confirmar Senha"></Label>
-            <Entry Placeholder="Confirme sua senha"></Entry>
+                <Label  Grid.Row="5" Text="UF"></Label>
+                <Entry  Grid.Row="6" Placeholder="Ex:São Paulo"></Entry>
+            </Grid>
 
-            <Button Text="Criar Conta" Margin="0,70,0,0"></Button>
+           
+    </Grid>
 
-            <Label Text="Termos de Uso e Política de Privacidade" HorizontalOptions="Center" TextColor="#e7e7e7" Margin="0,20,0,0"></Label>
+            <Grid Margin="0,100,0,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
 
+                <Label Grid.Row="0" Text="Senha" TextColor="#e7e7e7" Margin="25,0,0,0"></Label>
+                <Border   Grid.Row="1" StrokeShape="RoundRectangle 10" BackgroundColor="#E7E7E7" WidthRequest="360" Margin="15,0,0,0" HorizontalOptions="Start" HeightRequest="50">
+                    <Entry Grid.Row="1" Placeholder="Obr: Mínimo 8 caracteres" WidthRequest="325" PlaceholderColor="#604F1271"></Entry>
+                </Border>
+                
+                <Label Grid.Row="2" Text="Confirmar Senha" Margin="30,30,0,0" TextColor="#e7e7e7" ></Label>
+                <Border Grid.Row="3" StrokeShape="RoundRectangle 10" BackgroundColor="#E7E7E7" WidthRequest="360" Margin="15,0,0,0" HorizontalOptions="Start" HeightRequest="50">
+                    <Entry Grid.Row="3" Placeholder="Confirme sua senha" WidthRequest="325" PlaceholderColor="#604F1271"></Entry>
+                </Border>
+            </Grid>
+
+
+            <Grid Margin="0,-20,0,50">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+
+                <Button Grid.Row="0" Text="Criar Conta" Margin="0,70,0,0" BackgroundColor="#e7e7e7" TextColor="#4F1271" HeightRequest="60" WidthRequest="200" FontSize="17" FontAttributes="Bold"></Button>
+                <Label  Grid.Row="1" Text="Termos de Uso e Política de Privacidade" HorizontalOptions="Center" TextColor="#e7e7e7" Margin="0,30,0,0"></Label>
+            </Grid>
+            
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

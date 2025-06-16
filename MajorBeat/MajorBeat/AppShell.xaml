@@ -13,6 +13,6 @@
 
     <ShellContent    
     ContentTemplate="{DataTemplate local:HirerRegisterPage}"
-    Route="HirerRegisterPage" />
+    Route="HirerRegisterPage"/>
 
 </Shell>
