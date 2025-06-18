@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MajorBeat.Views"
     Shell.FlyoutBehavior="Disabled"
+    
  >
 
     <ShellContent
@@ -13,6 +14,7 @@
 
     <ShellContent    
     ContentTemplate="{DataTemplate local:HirerRegisterPage}"
-    Route="HirerRegisterPage"/>
+    Route="HirerRegisterPage"
+    Shell.BackgroundColor="#4F1271"/>
 
 </Shell>

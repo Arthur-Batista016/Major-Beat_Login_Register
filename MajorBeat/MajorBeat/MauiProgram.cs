@@ -9,7 +9,10 @@ namespace MajorBeat
             
 
             var builder = MauiApp.CreateBuilder();
+          
             builder
+
+            
                 .UseMauiApp<App>()
                 .ConfigureFonts(fonts =>
                 {
