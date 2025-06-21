@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace MajorBeat.Models
 {
-    internal class Contratante
+    public class Contratante
     {
+        public int id { get; set; }
+        public string nome { get; set; }
+        public string email { get; set; }
+        public string telefone { get; set; }
+        public string  logradouro { get; set; }
+        public string numero { get; set; }
+        public string cep { get; set; }
+        public string bairro { get; set; }
+        public string cidadde { get; set; }
+        public string uf { get; set; }
+
+        public string senha { get; set; }
+
     }
 }
