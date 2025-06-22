@@ -161,7 +161,7 @@ namespace MajorBeat.ViewModels
 
                 if (cRegistrado.id != 0)
                 {
-                    string mensagem = $"{cRegistrado.nome} registrado com sucesso.";
+                    string mensagem = $"{cRegistrado.nome} cadastrado com sucesso.";
                     await Application.Current.MainPage.DisplayAlert("Informação", mensagem, "Ok");
 
                     await Application.Current.MainPage

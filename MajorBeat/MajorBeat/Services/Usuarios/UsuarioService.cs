@@ -11,7 +11,7 @@ namespace MajorBeat.Services.Usuarios
     {
         private readonly Request _request;
 
-        private const string apiUrlBase = "https://rpgarthurgabriel.azurewebsites.net/Usuarios";
+        private const string apiUrlBase = "http://192.168.0.66:5000/Usuarios";
 
         public UsuarioService()
         {
@@ -20,7 +20,7 @@ namespace MajorBeat.Services.Usuarios
 
         public async Task<Contratante> PostRegistrarUsuarioAsync(Contratante u)
         {
-            string urlComplementar = "/Registrar";
+            string urlComplementar = "/PostUsuarios";
             u.id = await _request.PostReturnIntAsync(apiUrlBase + urlComplementar, u, string.Empty);
 
             return u;
