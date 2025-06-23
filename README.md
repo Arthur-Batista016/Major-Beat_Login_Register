@@ -12,7 +12,13 @@ TELAS CRIADAS
 - CADASTRO DE CONTRATANTE
 
 
+- **Página Inicial**  
+  ![PÁGINA INICIAL](images/inicial.jpg)
 
+- **Cadastro de Contratante**  
+  ![PÁGINA DE CADASTRO DO CONTRATANTE](images/cadastro-contratante.jpg)
 
+- **Confirmação de Cadastro**  
+  ![CONFIRMAÇÃO](images/confirmacao.jpg)
 
 
