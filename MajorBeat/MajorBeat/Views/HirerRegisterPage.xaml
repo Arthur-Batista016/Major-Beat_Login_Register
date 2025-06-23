@@ -8,7 +8,7 @@
         <VerticalStackLayout>
 
             <Grid>
-                <Button  HeightRequest="40" WidthRequest="100" CornerRadius="36" HorizontalOptions="Start" Margin="20,40,0,40" BackgroundColor="#e7e7e7"  ></Button>
+                <Button  x:Name="voltar" HeightRequest="40" WidthRequest="100" CornerRadius="36" HorizontalOptions="Start" Margin="20,40,0,40" BackgroundColor="#e7e7e7" Clicked="voltar_Clicked_1"   ></Button>
                 <Label Text="Voltar" FontSize="18" FontAttributes="Bold" FontFamily="InterBold" TextColor="#4F1271" Margin="0,46,250,0" HorizontalOptions="Center"></Label>
                 <Image Source="back.png" HeightRequest="20" Margin="-330,0,0,0"   ZIndex="1"/>
             </Grid>
@@ -177,7 +177,7 @@
                 </Grid.RowDefinitions>
 
 
-                <Button Grid.Row="0" Text="Criar Conta" Margin="0,70,0,0" BackgroundColor="#e7e7e7" TextColor="#4F1271" HeightRequest="60" WidthRequest="200" FontSize="17" FontAttributes="Bold" FontFamily="InterBold" Command="{Binding RegistrarCommand}"></Button>
+                <Button x:Name="criar" Grid.Row="0" Text="Criar Conta" Margin="0,70,0,0" BackgroundColor="#e7e7e7" TextColor="#4F1271" HeightRequest="60" WidthRequest="200" FontSize="17" FontAttributes="Bold" FontFamily="InterBold" Command="{Binding RegistrarCommand}"></Button>
                 <Label  Grid.Row="1" Text="Termos de Uso e Política de Privacidade" HorizontalOptions="Center" TextColor="#e7e7e7" Margin="0,30,0,0"></Label>
             </Grid>
             
