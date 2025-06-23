@@ -16,7 +16,7 @@ TELAS CRIADAS
   ![Página Inicial](imagem_readme/inicial.jpg)
 
 - **Cadastro de Contratante**  
-  ![Cadastro](imagem_readme/cadastro.jpg)
+  ![Cadastro](imagem_readme/cadastro1.jpg)
 
 - **Confirmação de Cadastro**  
    ![Cadastro 2](imagem_readme/cadastro2.jpg)
