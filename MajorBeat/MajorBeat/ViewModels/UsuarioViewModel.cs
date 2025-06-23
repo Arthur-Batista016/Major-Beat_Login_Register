@@ -152,7 +152,9 @@ namespace MajorBeat.ViewModels
                 u.numero = Numero;
                 u.cep = Cep;
                 u.bairro = Bairro;
+                u.cidade = Cidade;
                 u.uf = Uf;
+                u.senha = senha;
 
 
 

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using MajorBeat.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,8 +16,18 @@ namespace MajorBeat.Services
             HttpClient httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Authorization
             = new AuthenticationHeaderValue("Bearer", token);
-            var content = new StringContent(JsonConvert.SerializeObject(data)); content.Headers.ContentType = new MediaTypeHeaderValue("application/json"); HttpResponseMessage response = await httpClient.PostAsync(uri, content); string serialized = await response.Content.ReadAsStringAsync(); if (response.StatusCode == System.Net.HttpStatusCode.OK)
-                return int.Parse(serialized);
+
+            string json = JsonConvert.SerializeObject(data);
+
+            
+            System.Diagnostics.Debug.WriteLine("JSON ENVIADO:\n" + json);
+
+            var content = new StringContent(JsonConvert.SerializeObject(data)); content.Headers.ContentType = new MediaTypeHeaderValue("application/json"); HttpResponseMessage response = await httpClient.PostAsync(uri, content); string serialized = await response.Content.ReadAsStringAsync();
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                var contratante = JsonConvert.DeserializeObject<Contratante>(serialized);
+                return contratante.id;
+            }
             else
                 throw new Exception(serialized);
         }
