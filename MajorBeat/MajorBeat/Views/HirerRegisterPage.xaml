@@ -63,10 +63,12 @@
                     
                     <Picker
                     Grid.Row="0"
-                    WidthRequest="120"
+                    WidthRequest="60"
                     HorizontalOptions="Start"
-                    Margin="-60,0,0,0"
-                    TextColor="Black">
+                    Margin="0,5,0,0"
+                    ZIndex="1"
+                    
+                    >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
                                 <x:String>+55</x:String>
@@ -135,12 +137,12 @@
             <Grid Margin="0,300,0,0">
                     <Label  Grid.Row="5" Text="Cidade:" TextColor="#e7e7e7" Margin="22,-50,0,0" FontAttributes="Bold"  FontFamily="InterBold"></Label>
                  <Border  Grid.Row="6" StrokeShape="RoundRectangle 10" BackgroundColor="#E7E7E7" WidthRequest="175" Margin="10,-30,0,0" HorizontalOptions="Start" HeightRequest="55">
-                    <Entry  Grid.Row="6" Placeholder="Ex: São Paulo" FontAttributes="Bold" FontFamily="InterBold" PlaceholderColor="#604F1271" Text="{Binding Cidade}"></Entry>
+                        <Entry  Grid.Row="6" Placeholder="Ex: Campinas" FontAttributes="Bold" FontFamily="InterBold" PlaceholderColor="#604F1271" Text="{Binding Cidade}"></Entry>
                 </Border>
 
                     <Label  Grid.Row="5" Text="UF:" Margin="0,-50,150,0" TextColor="#e7e7e7" HorizontalOptions="End" FontAttributes="Bold"  FontFamily="InterBold"></Label>
                     <Border  Grid.Row="6" StrokeShape="RoundRectangle 10" BackgroundColor="#E7E7E7" WidthRequest="180" Margin="0,-30,30,0" HorizontalOptions="End" HeightRequest="55" >
-                        <Entry  Grid.Row="6" Placeholder="Ex: Campinas" FontAttributes="Bold" FontFamily="InterBold" PlaceholderColor="#604F1271"  BackgroundColor="Transparent" Text="{Binding Uf}"></Entry>
+                        <Entry  Grid.Row="6" Placeholder="Ex: São Paulo" FontAttributes="Bold" FontFamily="InterBold" PlaceholderColor="#604F1271"  BackgroundColor="Transparent" Text="{Binding Uf}"></Entry>
                     </Border>
             </Grid>
 

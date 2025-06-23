@@ -138,6 +138,18 @@ namespace MajorBeat.ViewModels
                 senha = value;
                 onPropertyChanged();
             }
+
+        }
+
+        private string codigoTelefone;
+        public string CodigoTelefone
+        {
+            get => codigoTelefone;
+            set
+            {
+                codigoTelefone = value;
+                onPropertyChanged();
+            }
         }
 
         public async Task RegistrarUsuario()
