@@ -13,12 +13,12 @@ TELAS CRIADAS
 
 
 - **Página Inicial**  
-  ![PÁGINA INICIAL](images/inicial.jpg)
+  (imagem_readme/inicial.jpg)
 
 - **Cadastro de Contratante**  
-  ![PÁGINA DE CADASTRO DO CONTRATANTE](images/cadastro-contratante.jpg)
+  (imagem_readme/cadastro.jpg)
 
 - **Confirmação de Cadastro**  
-  ![CONFIRMAÇÃO](images/confirmacao.jpg)
+   (imagem_readme/cadastro2.jpg)
 
 
